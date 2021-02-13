@@ -1,0 +1,16 @@
+.form-group.required .control-label:after {
+  content:"*";
+  color:red;
+}
+
+
+.error-validation{
+  color:red;
+  font-size: 1.5ch;
+  position: absolute;
+}
+
+.invalid{
+  border-color: #dc3545;
+}
+

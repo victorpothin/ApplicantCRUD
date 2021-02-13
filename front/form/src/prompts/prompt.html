@@ -1,0 +1,22 @@
+<template>
+
+
+  <div class="card" style="width: 18rem;">
+    <div class="card-body">
+      <h4 class="card-title">
+        Do you want to clear all data?</h4>
+      <p class="card-text">
+        This change will lose any information saved in your Sign Up.</p>
+
+      <div class="row justify-content-end">
+        <div class="col-3">
+          <button class="btn btn-primary" click.trigger="controller.ok(message)">Ok</button>
+        </div>
+        <div class="col">
+          <button class="btn btn-primary" click.trigger="controller.cancel()">Cancel</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</template>

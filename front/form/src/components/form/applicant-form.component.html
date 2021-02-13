@@ -1,0 +1,96 @@
+<template>
+  <require from="./applicant-form.component.css"></require>
+  <div>
+    <h2 class="py-5 text-center">
+      Hi &#128075;, Sign Up your data!
+      <h2>
+  </div>
+  <div class="container p-4">
+    <form role="form" class="form-vertical">
+
+      <div class="row justify-content-center p-3">
+        <div class="col-sm-4">
+          <div class="form-group required">
+            <label class="control-label">
+              Name
+            </label>
+            <div class="input-container">
+              <input type="text" placeholder="Name" class="form-control" value.bind="name & validate">
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-4">
+          <div class="form-group required">
+            <label class="control-label">Family Name</label>
+            <div class="input-container">
+              <input type="text" placeholder="Family Name" class="form-control" value.bind="familyName & validate">
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="row justify-content-center p-3">
+        <div class="col-sm-2">
+          <div class="form-group required">
+            <label class="control-label">Age</label>
+            <div class="input-container">
+              <input type="number" placeholder="Age" class="form-control" value.bind="age & validate">
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-3">
+          <div class="form-group required">
+            <label class="control-label">Country</label>
+            <div class="input-container">
+              <select name="Country" class="form-control" value.bind="country & validate">
+                <option model.bind="null">
+                  Select country...
+                </option>
+                <option repeat.for="country of countries" model.bind="country">
+                  ${country}
+                </option>
+              </select>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-3">
+          <div class="form-group">
+            <label class="control-label">Hired</label>
+            <div class="input-container">
+              <select name="Hired" class="form-control" value.bind="hired">
+                <option model.bind="null">
+                  Select...
+                </option>
+                <option model.bind="true">Yes</option>
+                <option model.bind="false">No</option>
+              </select>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="row justify-content-center p-3">
+        <div class="col-sm-4">
+          <div class="form-group required">
+            <label class="control-label">Address</label>
+            <div class="input-container">
+              <input type="text" placeholder="Address" class="form-control" value.bind="address & validate">
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-4">
+          <div class="form-group required">
+            <label class="control-label">E-mail Address</label>
+            <div class="input-container">
+              <input type="text" placeholder="E-mail Address" class="form-control" value.bind="eMailAddress & validate">
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="row justify-content-end p-3">
+        <div class="col-sm-4">
+          <button type="button" click.delegate="submit()" class="btn btn-primary">Send</button>
+          <button type="button" click.delegate="clear()" class="btn btn-secondary">Clear</button>
+        </div>
+      </div>
+    </form>
+</template>
